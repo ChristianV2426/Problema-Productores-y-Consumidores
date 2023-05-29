@@ -87,5 +87,9 @@ int main(int argc, char *argv[]) {
   pthread_join(consumidor1, NULL);
   pthread_join(consumidor2, NULL);
 
+  sem_destroy(&espaciosVacios);
+  sem_destroy(&espaciosLlenos);
+  sem_destroy(&mutex);
+
   return 0;
 }
